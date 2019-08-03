@@ -40,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
 
         startLayout.setVisibility(View.VISIBLE);
         gameLayout.setVisibility(View.INVISIBLE);
+        button0.setEnabled(true);
+        button1.setEnabled(true);
+        button2.setEnabled(true);
+        button3.setEnabled(true);
+
 
     }
 
@@ -68,6 +73,11 @@ public class MainActivity extends AppCompatActivity {
             public void onFinish() {
                 resultTextView.setText("GAME OVER\nRight answers: " + Integer.toString(score));
                 playAgainButton.setVisibility(View.VISIBLE);
+                button0.setEnabled(false);
+                button1.setEnabled(false);
+                button2.setEnabled(false);
+                button3.setEnabled(false);
+
             }
         }.start();
 
